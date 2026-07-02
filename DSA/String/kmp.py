@@ -36,7 +36,7 @@ def patternSearch():
             print("length",length)
             if length == len(patt): return True
         else:
-            if length!=0:
+            if length != 0:
                 length = lpsArr[length-1]
             else:
                 i+=1
