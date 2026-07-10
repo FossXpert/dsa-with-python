@@ -1,6 +1,6 @@
 
 nums = []
-ans []
+ans = []
 def threeSum(self, nums: list[int]) -> list[list[int]]:
     for i in range(0, len(nums)):
         tripl1 = nums[i]
@@ -14,3 +14,6 @@ def threeSum(self, nums: list[int]) -> list[list[int]]:
             if x in mapp and k!=i and i!=mapp[x] and k!=mapp[x]:
                 ans.append(tripl1,nums[mapp[x]],nums[k])
 
+    print(ans)
+
+# not a great soultion a s i am using hashing, and it goes to O(n3)
