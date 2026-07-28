@@ -1,15 +1,13 @@
 ** General summary of what kind of problem can/ cannot solved by Two Pointers **
 link  - https://leetcode.com/problems/subarray-sum-equals-k/solutions/301242/general-summary-of-what-kind-of-problem-3py46
+see comment section
 
-Now let's generalize the characteristics of the problems that can be solved by two pinters. The summary is simple:
+I like the idea of your rules, but I think they're a little off. I would like to propose a better set of rules:
 
-1. If a wider scope of the sliding window is valid, the narrower scope of that wider scope is valid  - must hold
-2. If a narrower scope of the sliding window is invalid, the wider scope of that narrower scope is invalid - must hold
+1. If the narrow scope of your window is valid, then the wider scope is valid. By definition of the narrow window being a sub problem of the wider problem.
 
-With 2 rules above hold, we are able to optimize the brute-force solution to two pointers solution.
+2. If the wider scope of the window is invalid, then the narrow scope is also invalid. By definition of the wider window being a full problem of the given sub problem (narrow window -> sub problem).
 
-I just show you what kind of question can be solved by two pointers by using some very simple Induction Reasoning. Now let me show you why this problem cannot be solved by two pointers. Like I said, If this problem doesn't meet the creteria that two pointer technique, it cannot be solved with two pointers.
+3. If the narrow scope of your window is invalid, it doesn't always mean the wider scope is invalid. You need to increment the pointers to find out (this is why the 2 pointer solution works, after all). In a given narrow window, you cannot guarantee that this window means the solution cannot be found, because the narrow window is just a slice of a given string, array chunk, whatever. Then, if all sub problems are solved and the wider problem is also invalid, then we can say that all sub problems or sub strings cannot be formed to solve the problem
 
-In this specific problem, rule 1 doesn't hold, because I can find a specific case such that it doesn't hold, e.g., if K is 3, 1,1,1 sum is 3, so 1,1,1, is valid, but 1,1 sum is 2 which means 1,1 is invalid, so rule 1 breaks.
-
-Rule2 doesn't hold, either, because I can find a specific case such that it doesn't hold, e.g., if K is 2, 1,1,1 sum is 3, so 1,1,1, is invalid, but 1,1,1,-1 sum is 2 which means 1,1,1,-1 is valid, so rule 2 breaks.
+check link man
