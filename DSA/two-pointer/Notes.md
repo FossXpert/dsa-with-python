@@ -3,7 +3,6 @@ link  - https://leetcode.com/problems/subarray-sum-equals-k/solutions/301242/gen
 see comment section
 
 Now let's generalize the characteristics of the problems that can be solved by two pinters. The summary is simple:
-I like the idea of your rules, but I think they're a little off. I would like to propose a better set of rules:
 
 1. If the narrow scope of your window is valid, then the wider scope is valid. By definition of the narrow window being a sub problem of the wider problem.
 
