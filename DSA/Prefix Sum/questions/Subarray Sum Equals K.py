@@ -18,3 +18,4 @@ class Solution:
             # mapp[pfix] = 1 + mapp.get(pfix,0)
             # Without .get(), if you tried to do mapp[pfix] = mapp[pfix] + 1 on a brand-new prefix sum, Python would crash immediately because the key doesn't exist yet! .get(pfix, 0) prevents that crash by providing 0 as the starting count.
         return count
+# https://leetcode.com/problems/subarray-sum-equals-k/
