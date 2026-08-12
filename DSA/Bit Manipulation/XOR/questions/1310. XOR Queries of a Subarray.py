@@ -18,3 +18,5 @@ class Solution:
                 ans.append(xorArr[right] ^ xorArr[left - 1])
 
         return ans
+
+# https://leetcode.com/problems/xor-queries-of-a-subarray/description/
