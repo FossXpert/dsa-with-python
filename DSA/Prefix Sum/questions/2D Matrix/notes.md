@@ -15,20 +15,3 @@ print(len(dp))     # Number of rows = 4 (n + 1)
 print(len(dp[0]))  # Number of columns = 5 (m + 1)
 
 ```
-
----
-
-### ⚠️ A Common Mistake to Avoid!
-
-Never initialize a 2D list using multiplication like this:
-
-```python
-# ❌ DON'T DO THIS FOR 2D ARRAYS
-dp = [[0] * (m + 1)] * (n + 1)
-
-```
-
-**Why is this a trap?**
-Multiplication (`*`) copies **references**, not independent objects. It will create a single list for columns and reuse that *exact same list* for every single row. If you change a value in one row (e.g., `dp[0][1] = 5`), it will unexpectedly change in all other rows too!
-
-Using the list comprehension (`[[0 for c in range(...)] for r in range(...)]`) ensures every row is a brand-new, independent list in memory.
