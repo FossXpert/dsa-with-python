@@ -1,6 +1,6 @@
 # This question is leetcode premium, so i got it from neetcode and i solved it myself , no help from anybody
 # https://leetcode.com/problems/meeting-rooms-ii/
-# https://neetcode.io/problems/meeting-schedule-ii/question
+# https://neetcode.io/problems/meeting-schedule-ii/question - Meeting Rooms II
 """
 Definition of Interval:
 class Interval(object):
