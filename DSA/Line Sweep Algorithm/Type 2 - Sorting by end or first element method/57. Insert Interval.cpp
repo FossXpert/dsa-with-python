@@ -27,6 +27,17 @@ public:
             i++;
         }
         // Phase 2: Merge all overlapping intervals with newInterval
+        /*
+        1. The Loop Condition: while (i < n and intervals[i][0] <= newInterval[1])
+            The loop keeps running as long as two conditions are met:
+            i < n: A safety check ensuring we haven't reached the end of the intervals array.
+
+            intervals[i][0] <= newInterval[1]: This is the overlap check.
+
+            Remember, Phase 1 already skipped any interval that ended before our new interval started.
+
+            Therefore, if the start time of the current interval (intervals[i][0]) is less than or equal to the end time of our new interval (newInterval[1]), it means they overlap
+                    */
         while (i < n and intervals[i][0] <= newInterval[1]) {
             newInterval[0] = min(newInterval[0], intervals[i][0]);
             newInterval[1] = max(newInterval[1], intervals[i][1]);
