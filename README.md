@@ -1,2 +1,2 @@
-# dsa-with-python
-DSA questions solution in python language
+# dsa-with-c++
+DSA questions solution in c++ language
